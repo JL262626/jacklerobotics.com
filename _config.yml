@@ -15,9 +15,8 @@ title: Jack Le's Portfolio # This is what shows up in the tab of the browser
 name: Jack Le
 headline: headline message
 description: >- # dont remove this line. this will ignore all new lines until the next section
-  Write an awesome intro and discuss your highlights and qualification. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  I'm an engineering undergraduate with a focus on robotics, embedded systems, and practical prototyping. I design and build hardware end‑to‑end—from CAD and PCB layout to firmware, control systems, and functional prototypes. My work combines mechanical design, electronics, and programming to create reliable, hands‑on engineering projects.
+
 
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
 profile_image: ./assets/images/profile-image/avatar.jpeg
