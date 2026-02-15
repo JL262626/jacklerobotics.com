@@ -16,7 +16,7 @@ skills:
   - 3D Printing
   - MATLAB
 
-main-image: /BOB.jpg
+main-image: /BOBCOVER.jpg
 ---
 
 ---
