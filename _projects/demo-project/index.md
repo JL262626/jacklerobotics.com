@@ -5,10 +5,11 @@ description:  Created a high‑precision ball‑balancing robot using a custom 3
   manipulator, dual‑ESP32 control, and computer‑vision tracking, achieving
   a steady‑state error of under 1 mm from the target.
 skills: 
-  - ESP32 Microcontroller
+  - ESP32
   - PID Control
-  - Computer Vision Tracking
+  - Computer Vision
   - PCB Design
+  - KiCad
   - Fusion 360
   - 3D Printing
   - MATLAB
