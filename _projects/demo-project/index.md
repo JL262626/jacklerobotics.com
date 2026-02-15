@@ -6,6 +6,8 @@ description:  Created a high‑precision ball‑balancing robot using a custom 3
   a steady‑state error of under 1 mm from the target.
 skills: 
   - ESP32
+  - C++
+  - Python
   - PID Control
   - Computer Vision
   - PCB Design
