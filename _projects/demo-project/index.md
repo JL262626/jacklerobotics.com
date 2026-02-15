@@ -16,7 +16,7 @@ skills:
   - 3D Printing
   - MATLAB
 
-main-image: /project2.jpg
+main-image: /BOB.HEIC
 ---
 
 ---
