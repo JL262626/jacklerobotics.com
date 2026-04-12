@@ -34,7 +34,7 @@ main-image: /BOBCOVER.jpg
 
 # How?
 ## 1. Electronics
-{% include image-gallery.html images="BOB_wiringdiagram.png" height="500" %} 
+{% include image-gallery.html images="BOB_wiring__diagram.png" height="800" %} 
 Wiring Diagram
 - The electronics are built around an ESP32 microcontroller that performs real‑time PID updates, issues motor commands, and communicates with the vision system.
 - Each actuator is driven by a TMC2209 stepper driver, supplied with a 24V poer supply and a buck converter
