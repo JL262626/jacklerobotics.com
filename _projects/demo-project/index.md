@@ -36,7 +36,7 @@ Use this to have subsection if needed
 - Developed a 40 FPS ball detection algorithm running on a ESP32
 - Integrated control panel with live telemetry, allowing users to intuitively explore PID behaviour
 - Won the 10K Club Competition, securing $10,000 to continue developing the project
-
+{% include youtube-video.html id="5z0NnkYsKTI" autoplay= "false"%}
 
 ## Embedding images 
 ### External images
