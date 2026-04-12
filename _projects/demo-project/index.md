@@ -30,17 +30,25 @@ main-image: /BOBCOVER.jpg
 - Integrated control panel with live telemetry, allowing users to intuitively explore PID behaviour
 - Won the 10K Club Competition, securing $10,000 to continue developing the project
 
-{% include youtube-video.html id="5z0NnkYsKTI" autoplay= "false"%}
+{% include youtube-video.html id="5z0NnkYsKTI" autoplay= "false" width= "900px" %}
 
-{% include image-gallery.html images="BOB_internals.jpg" height="400" %} 
-place the images in project folder/images then update the file path.   
+# How?
+## 1. Electronics
+{% include image-gallery.html images="BOB_pcb.jpg" height="300" %} 
+{% include image-gallery.html images="BOB_internals.jpg" height="300" %} 
+{% include image-gallery.html images="BOB_wiring_diagram.jpg" height="300" %} 
+- The electronics are built around an ESP32 microcontroller that performs real‑time PID updates, issues motor commands, and communicates with the vision system.
+- Each actuator is driven by a TMC2209 stepper driver, selected for its microstepping accuracy, current limiting, and reliable high‑speed performance.
+- A 24 V supply powers the stepper drivers and is stepped down through a buck converter to provide clean 5 V power for the ESP32 and all peripherals.
+- A custom PCB integrates the ESP32, stepper drivers, power regulation, limit‑switch inputs, and filtering components into a compact, noise‑resistant layout.
+- A dedicated ESP32‑S3‑CAM mounted above the platform handles image capture and processing, sending ball‑position data to the main controller over serial.
+- The PCB includes a curved edge to fit precisely inside the base, creating enough internal clearance for the power supply while keeping the wiring compact and organised.
 
-
-## Embedding youtube video
-The second video has the autoplay on. copy and paste the 11-digit id found in the url link. <br>
-*Example* : https://www.youtube.com/watch?v={**MhVw-MHGv4s**}&ab_channel=engineerguy
-{% include youtube-video.html id="MhVw-MHGv4s" autoplay= "false"%}
-{% include youtube-video.html id="XGC31lmdS6s" autoplay = "true" %}
+## 2. Software
+- The B.O.B. system comprises three primary subsystems: a vision module, a central processor, and a user interface. 
+- An ESP32-CAM mounted on top of the robot, pointing down, utilises computer vision to detect the location of the ball and continuously sends this data to the main ESP32. 
+- The ESP32 uses the coordinate data stream to run a PID controller and inverse kinematics to control three motor drivers, which, in turn, move stepper motors to tilt the platform to a desired position to balance the ball. 
+- Simultaneously, the main ESP32 wirelessly exchanges data with a laptop connected to its access point, allowing the user to monitor and control the robot.
 
 you can also set up custom size by specifying the width (the aspect ratio has been set to 16/9). The default size is 560 pixels x 315 pixels.  
 
