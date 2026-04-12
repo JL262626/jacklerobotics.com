@@ -27,6 +27,15 @@ Use this for the header of each section
 ### Header 3 
 Use this to have subsection if needed
 
+# Aim
+- To build a robot capable of balancing a ball on a platform indefinitely, with <1mm steady-state error
+- Keep the total cost under $150 by only using ESP32-based hardware
+# Result
+- Achieved <1mm steady-state error during balancing
+- Developed a 40 FPS ball detection algorithm running on a ESP32
+- Integrated control panel with live telemetry, allowing users to intuitively explore PID behaviour
+- Won the 10K Club Competition, securing $10,000 to continue developing the project
+
 
 ## Embedding images 
 ### External images
