@@ -37,11 +37,9 @@ main-image: /BOBCOVER.jpg
 {% include image-gallery.html images="BOB_pcb.png" height="300" %}{% include image-gallery.html images="BOB_internals.jpg" height="300" %}{% include image-gallery.html images="BOB_wiring_diagram.png" height="300" %} 
 
 - The electronics are built around an ESP32 microcontroller that performs real‑time PID updates, issues motor commands, and communicates with the vision system.
-- Each actuator is driven by a TMC2209 stepper driver, selected for its microstepping accuracy, current limiting, and reliable high‑speed performance.
-- A 24 V supply powers the stepper drivers and is stepped down through a buck converter to provide clean 5 V power for the ESP32 and all peripherals.
+- Each actuator is driven by a TMC2209 stepper driver, supplied iwth a 24V poer supply and a buck converter
 - A custom PCB integrates the ESP32, stepper drivers, power regulation, limit‑switch inputs, and filtering components into a compact, noise‑resistant layout.
 - A dedicated ESP32‑S3‑CAM mounted above the platform handles image capture and processing, sending ball‑position data to the main controller over serial.
-- The PCB includes a curved edge to fit precisely inside the base, creating enough internal clearance for the power supply while keeping the wiring compact and organised.
 
 ## 2. Software
 - The B.O.B. system comprises three primary subsystems: a vision module, a central processor, and a user interface. 
@@ -49,7 +47,7 @@ main-image: /BOBCOVER.jpg
 - The ESP32 uses the coordinate data stream to run a PID controller and inverse kinematics to control three motor drivers, which, in turn, move stepper motors to tilt the platform to a desired position to balance the ball. 
 - Simultaneously, the main ESP32 wirelessly exchanges data with a laptop connected to its access point, allowing the user to monitor and control the robot.
 
-you can also set up custom size by specifying the width (the aspect ratio has been set to 16/9). The default size is 560 pixels x 315 pixels.  
+{% include image-gallery.html images="BOB_software.png" height="400" %} 
 
 The width of the video below. Regardless of initial width, all the videos is responsive and will fit within the smaller screen.
 {% include youtube-video.html id="tGCdLEQzde0" autoplay = "false" width= "900px" %}  
