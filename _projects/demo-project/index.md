@@ -36,7 +36,7 @@ main-image: /BOBCOVER.jpg
 ## 1. Electronics
 {% include image-gallery.html images="BOB_wiring_diagram.png" height="500" %} 
 Wiring Diagram
-
+{% include image-gallery.html images="BOB_wiring_diagram.png" height="500" %} 
 - The electronics are built around an ESP32 microcontroller that performs real‑time PID updates, issues motor commands, and communicates with the vision system.
 - Each actuator is driven by a TMC2209 stepper driver, supplied iwth a 24V poer supply and a buck converter
 - A custom PCB integrates the ESP32, stepper drivers, power regulation, limit‑switch inputs, and filtering components into a compact, noise‑resistant layout.
@@ -50,7 +50,8 @@ Final Internals
 - The ESP32 uses the coordinate data stream to run a PID controller and inverse kinematics to control three motor drivers, which, in turn, move stepper motors to tilt the platform to a desired position to balance the ball. 
 - Simultaneously, the main ESP32 wirelessly exchanges data with a laptop connected to its access point, allowing the user to monitor and control the robot.
 
-{% include image-gallery.html images="BOB_software.png" height="500" %} 
+{% include image-gallery.html images="BOB_software.png" height="600" %} 
+
 
 The width of the video below. Regardless of initial width, all the videos is responsive and will fit within the smaller screen.
 {% include youtube-video.html id="tGCdLEQzde0" autoplay = "false" width= "900px" %}  
