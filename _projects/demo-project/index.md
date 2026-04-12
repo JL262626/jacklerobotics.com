@@ -40,7 +40,7 @@ main-image: /BOBCOVER.jpg
 - Each actuator is driven by a TMC2209 stepper driver, supplied with a 24V poer supply and a buck converter
 - A custom PCB integrates the ESP32, stepper drivers, power regulation, limit‑switch inputs, and filtering components into a compact, noise‑resistant layout.
 - A dedicated ESP32‑S3‑CAM mounted above the platform handles image capture and processing, sending ball‑position data to the main controller over serial.
-{% include image-gallery.html images="BOB_internals.jpg" height="400" %}
+{% include image-gallery.html images="BOB_internals.jpg" height="500" %}
 ### Final Internals
 
 ## 2. Software
@@ -56,7 +56,7 @@ main-image: /BOBCOVER.jpg
 - Every fourth pixel is converted to HSV and compared against calibrated thresholds to isolate the orange ball. 
 - The coordinates of all detected pixels are averaged to compute the centroid, which is transmitted to the main ESP32 via UART. 
 - To ensure reliable detection under varying lighting, a high‑intensity LED was added to stabilise colour readings
-{% include image-gallery.html images="BOB_filter_demo.jpg" height="400" %}
+{% include image-gallery.html images="BOB_filter_demo.jpg" height="500" %}
 ### HSV Analysis
 
 ### b, Control and Firmware
@@ -69,7 +69,9 @@ main-image: /BOBCOVER.jpg
 ### c, User Interface
 - The main ESP32 hosts a local web server through its own Access Point, allowing any device to connect without external Wi‑Fi. 
 - The interface is built using HTML, CSS, and JavaScript, with a WebSocket connection enabling real‑time visualisation of the ball’s position, PID vectors, and responsive control inputs. 
-- Users can adjust PID gains, select geometric path‑following modes, or click directly on the display to set a target point. 
+- Users can adjust PID gains, select geometric path‑following modes, or click directly on the display to set a target point.
+{% include image-gallery.html images="BOB_slide_mode.jpg" height="500" %} 
+###  User Interface
 <br>
 
 ## Adding a hozontal line
