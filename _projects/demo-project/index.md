@@ -57,11 +57,19 @@ main-image: /BOBCOVER.jpg
 - The coordinates of all detected pixels are averaged to compute the centroid, which is transmitted to the main ESP32 via UART. 
 - To ensure reliable detection under varying lighting, a high‑intensity LED was added to stabilise colour readings
 {% include image-gallery.html images="BOB_filter_demo.jpg" height="400" %}
+### HSV Analysis
 
+### b, Control and Firmware
+- The main ESP32 receives the ball’s centroid coordinates and runs a PID controller to determine the required platform tilt. 
+- Using inverse kinematics, the controller computes the motor angles needed to achieve the desired normal vector, with the AccelStepper library providing smooth, coordinated motion across all three stepper motors. 
+- To eliminate high‑frequency vibration caused by noise in the Derivative term, a dynamic‑D algorithm was implemented that reduces the D‑gain when the ball is near the target. 
+- A startup calibration routine was also added to measure the platform’s natural tilt and apply corrective offsets, removing steady‑state error caused by non‑level surfaces. 
+- Motor driver temperatures were reduced by lowering the current limit, which remained effective due to the platform’s low mass.
 
-The width of the video below. Regardless of initial width, all the videos is responsive and will fit within the smaller screen.
-{% include youtube-video.html id="tGCdLEQzde0" autoplay = "false" width= "900px" %}  
-
+### c, User Interface
+- The main ESP32 hosts a local web server through its own Access Point, allowing any device to connect without external Wi‑Fi. 
+- The interface is built using HTML, CSS, and JavaScript, with a WebSocket connection enabling real‑time visualisation of the ball’s position, PID vectors, and responsive control inputs. 
+- Users can adjust PID gains, select geometric path‑following modes, or click directly on the display to set a target point. 
 <br>
 
 ## Adding a hozontal line
@@ -76,17 +84,6 @@ this is how you input **bold text**
 ## Adding italic text
 Italicized text is the *cat's meow*.
 
-## Adding ordered list
-1. First item
-2. Second item
-3. Third item
-4. Fourth item
-
-## Adding unordered list
-- First item
-- Second item
-- Third item
-- Fourth item
 
 ## Adding code block
 ```ruby
