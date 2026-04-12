@@ -35,12 +35,14 @@ main-image: /BOBCOVER.jpg
 # How?
 ## 1. Electronics
 {% include image-gallery.html images="BOB_wiring_diagram.png" height="500" %} 
+Wiring Diagram
 
 - The electronics are built around an ESP32 microcontroller that performs real‑time PID updates, issues motor commands, and communicates with the vision system.
 - Each actuator is driven by a TMC2209 stepper driver, supplied iwth a 24V poer supply and a buck converter
 - A custom PCB integrates the ESP32, stepper drivers, power regulation, limit‑switch inputs, and filtering components into a compact, noise‑resistant layout.
 - A dedicated ESP32‑S3‑CAM mounted above the platform handles image capture and processing, sending ball‑position data to the main controller over serial.
 {% include image-gallery.html images="BOB_internals.jpg" height="300" %}
+Final Internals
 
 ## 2. Software
 - The B.O.B. system comprises three primary subsystems: a vision module, a central processor, and a user interface. 
