@@ -34,9 +34,8 @@ main-image: /BOBCOVER.jpg
 
 # How?
 ## 1. Electronics
-{% include image-gallery.html images="BOB_pcb.png" height="300" %} 
-{% include image-gallery.html images="BOB_internals.jpg" height="300" %} 
-{% include image-gallery.html images="BOB_wiring_diagram.png" height="300" %} 
+{% include image-gallery.html images="BOB_pcb.png" height="300" %}{% include image-gallery.html images="BOB_internals.jpg" height="300" %}{% include image-gallery.html images="BOB_wiring_diagram.png" height="300" %} 
+
 - The electronics are built around an ESP32 microcontroller that performs real‑time PID updates, issues motor commands, and communicates with the vision system.
 - Each actuator is driven by a TMC2209 stepper driver, selected for its microstepping accuracy, current limiting, and reliable high‑speed performance.
 - A 24 V supply powers the stepper drivers and is stepped down through a buck converter to provide clean 5 V power for the ESP32 and all peripherals.
