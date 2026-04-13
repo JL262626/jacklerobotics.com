@@ -15,7 +15,7 @@ title: Jack Le's Portfolio # This is what shows up in the tab of the browser
 name: Jack Le
 headline: Electrical Engineering Undergraduate <br/>contact@jackle.net
 description: >- # dont remove this line. this will ignore all new lines until the next section
-  I'm an engineering undergraduate with a focus on robotics, embedded systems, and practical prototyping. I design and build hardware end‑to‑end—from CAD and PCB layout to firmware, control systems, and functional prototypes. My work combines mechanical design, electronics, and programming to create reliable, hands‑on engineering projects.
+  I'm an engineering undergraduate with a focus on robotics, embedded systems, and practical prototyping. My work combines mechanical design, electronics, and programming to create reliable, hands‑on engineering projects.
 
 
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
@@ -24,7 +24,7 @@ profile_image: ./assets/images/profile-image/face.jpeg
 
 # Link your resume
 # You can place your resume in assets/resume/{resume.pdf or add external link such as pdf saved in google drive 
-resume-url: https://drive.google.com/file/d/13Z3duVzh-gguPU5r03oJVEE6rV9rd3DS/view?usp=sharing # or /assets/resume/resume.pdf
+resume-url: /assets/resume/Resume - Jack Le.pdf
 
 
 # Set up external links - this will show up as small icons next to your name.
